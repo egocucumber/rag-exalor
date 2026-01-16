@@ -30,13 +30,13 @@
 
 ```mermaid
 graph LR
-    User[Пользователь] -->|HTTP| Nginx[Frontend (Nginx)]
-    Nginx -->|API Request| API[Backend (FastAPI)]
-    API -->|Ingest PDF| Ingest[PDF Processor]
-    Ingest -->|Embeddings| Chroma[(ChromaDB)]
-    API -->|RAG Query| LangGraph[LangGraph Agent]
+    User["Пользователь"] -->|HTTP| Nginx["Frontend (Nginx)"]
+    Nginx -->|API Request| API["Backend (FastAPI)"]
+    API -->|Ingest PDF| Ingest["PDF Processor"]
+    Ingest -->|Embeddings| Chroma[("ChromaDB")]
+    API -->|RAG Query| LangGraph["LangGraph Agent"]
     LangGraph -->|Retrieve| Chroma
-    LangGraph -->|Generate| Groq[Groq API (Llama 3)]
+    LangGraph -->|Generate| Groq["Groq API (Llama 3)"]
 ```
 
 ### Frontend
